@@ -212,11 +212,6 @@ function App() {
           </div>
         )}
 
-        {/* FOOTER */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-gray-500 text-xs">
-          Built with ❤️ by you
-        </div>
-
       </div>
     </div>
   );
