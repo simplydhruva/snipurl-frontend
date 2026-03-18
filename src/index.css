@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🌌 Base Styling */
+body {
+  @apply bg-darkBg text-white antialiased;
+}
+
+/* 🌌 Animated Gradient Background */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.bg-animated {
+  background: linear-gradient(
+    120deg,
+    #0a0a0f,
+    #0f0f1a,
+    #0a0a0f,
+    #111827
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 12s ease infinite;
+}
+
+/* ✨ Floating Glow Orbs */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ⚡ Button Shine Effect */
+@keyframes shine {
+  0% { background-position: -200%; }
+  100% { background-position: 200%; }
+}
+
+.btn-shine {
+  background: linear-gradient(
+    120deg,
+    #a855f7,
+    #00f5ff,
+    #a855f7
+  );
+  background-size: 200%;
+  animation: shine 3s linear infinite;
+  color: white;
+}
+
+/* 🌌 Particles Background */
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.particles span {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 50%;
+  animation: moveParticles linear infinite;
+}
+
+@keyframes moveParticles {
+  from {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+}
+
+/* 🎬 Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* ✨ Smooth Global Transitions */
+* {
+  transition: all 0.2s ease-in-out;
+}
