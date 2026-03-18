@@ -51,7 +51,7 @@ function App() {
     setError("");
 
     try {
-      const res = await fetch("http://localhost:5000/shorten", {
+      const res = await fetch("https://snipurl-backend.onrender.com/shorten", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
